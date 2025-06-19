@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Card Flip Grid with Embedded Images</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      padding: 40px;
+      background: #f4f4f4;
+    }
+    .card-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 60px;
+      justify-content: center;
+    }
+    .card-container {
+      perspective: 1000px;
+      width: 200px;
+      height: 300px;
+    }
+    .card {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 0.8s;
+      cursor: pointer;
+    }
+    .card:hover {
+      transform: rotateY(180deg);
+    }
+    .card-face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .card-face img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .back {
+      transform: rotateY(180deg);
+    }
+  </style>
+</head>
+<body>
+
+<div class="card-grid">
+
+  <div class="card-container">
+    <div class="card">
+      <div class="card-face front">
+        <!-- Blue block -->
+        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjMwMCIgZmlsbD0iIzI5ODBjOSIgcng9IjgiLz48L3N2Zz4=" alt="Front 1"/>
+      </div>
+      <div class="card-face back">
+        <!-- Red block -->
+        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjMwMCIgZmlsbD0iI2U3NGMzYyIgcng9IjgiLz48L3N2Zz4=" alt="Back 1"/>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-container">
+    <div class="card">
+      <div class="card-face front">
+        <!-- Green block -->
+        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjMwMCIgZmlsbD0iIzI5ODBjOSIgY3JlYXRpb249IiIgcng9IjgiLz48L3N2Zz4=" alt="Front 2"/>
+      </div>
+      <div class="card-face back">
+        <!-- Orange block -->
+        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjMwMCIgZmlsbD0iI2ZmNjMyMCIgcng9IjgiLz48L3N2Zz4=" alt="Back 2"/>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-container">
+    <div class="card">
+      <div class="card-face front">
+        <!-- Purple block -->
+        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjMwMCIgZmlsbD0iIzgwMjhiOSIgcng9IjgiLz48L3N2Zz4=" alt="Front 3"/>
+      </div>
+      <div class="card-face back">
+        <!-- Yellow block -->
+        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjMwMCIgZmlsbD0iI2ZmZjkxMCIgcng9IjgiLz48L3N2Zz4=" alt="Back 3"/>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-container">
+    <div class="card">
+      <div class="card-face front">
+        <!-- Cyan block -->
+        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjMwMCIgZmlsbD0iIzAyOGZiZiIgcng9IjgiLz48L3N2Zz4=" alt="Front 4"/>
+      </div>
+      <div class="card-face back">
+        <!-- Pink block -->
+        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjMwMCIgZmlsbD0iI2ZmODliZiIgcng9IjgiLz48L3N2Zz4=" alt="Back 4"/>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-container">
+    <div class="card">
+      <div class="card-face front">
+        <!-- Dark Blue block -->
+        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjMwMCIgZmlsbD0iIzAxMTJiZiIgcng9IjgiLz48L3N2Zz4=" alt="Front 5"/>
+      </div>
+      <div class="card-face back">
+        <!-- Light Grey block -->
+        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjMwMCIgZmlsbD0iI2NjY2NjYyIgcng9IjgiLz48L3N2Zz4=" alt="Back 5"/>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

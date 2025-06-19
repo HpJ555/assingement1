@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Enhanced Color Palette</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #ece9e6, #ffffff);
+      padding: 2rem;
+      margin: 0;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 2rem;
+      color: #333;
+    }
+
+    .palette {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .color-box {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      background: #fff;
+      transition: transform 0.3s ease;
+    }
+
+    .color-box:hover {
+      transform: scale(1.03);
+    }
+
+    .swatch {
+      height: 120px;
+      position: relative;
+    }
+
+    .swatch::after {
+      content: attr(data-color);
+      position: absolute;
+      bottom: 8px;
+      right: 12px;
+      background: rgba(255,255,255,0.75);
+      padding: 2px 6px;
+      font-size: 0.75rem;
+      border-radius: 4px;
+      color: #333;
+      font-weight: 500;
+    }
+
+    .info {
+      padding: 1rem;
+    }
+
+    .label {
+      font-size: 0.9rem;
+      font-weight: bold;
+      color: #555;
+      margin-bottom: 0.4rem;
+    }
+
+    .code {
+      font-family: 'Courier New', monospace;
+      background: #f0f0f0;
+      padding: 6px 8px;
+      border-radius: 6px;
+      display: inline-block;
+      font-size: 0.9rem;
+      color: #222;
+    }
+
+    .tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      background: #dcdcdc;
+      color: #333;
+      padding: 2px 6px;
+      border-radius: 4px;
+      margin-left: 0.5rem;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    @media (max-width: 500px) {
+      .swatch::after {
+        font-size: 0.65rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Enhanced Color Palette Display</h1>
+
+  <div class="palette">
+    <!-- RGB -->
+    <div class="color-box">
+      <div class="swatch" style="background-color: rgb(255, 99, 71);" data-color="rgb(255, 99, 71)"></div>
+      <div class="info">
+        <div class="label">RGB <span class="tag">rgb</span></div>
+        <div class="code">rgb(255, 99, 71)</div>
+      </div>
+    </div>
+
+    <!-- RGBA -->
+    <div class="color-box">
+      <div class="swatch" style="background-color: rgba(255, 99, 71, 0.5);" data-color="rgba(255, 99, 71, 0.5)"></div>
+      <div class="info">
+        <div class="label">RGBA <span class="tag">rgba</span></div>
+        <div class="code">rgba(255, 99, 71, 0.5)</div>
+      </div>
+    </div>
+
+    <!-- HSL -->
+    <div class="color-box">
+      <div class="swatch" style="background-color: hsl(9, 100%, 64%);" data-color="hsl(9, 100%, 64%)"></div>
+      <div class="info">
+        <div class="label">HSL <span class="tag">hsl</span></div>
+        <div class="code">hsl(9, 100%, 64%)</div>
+      </div>
+    </div>
+
+    <!-- HSLA -->
+    <div class="color-box">
+      <div class="swatch" style="background-color: hsla(9, 100%, 64%, 0.5);" data-color="hsla(9, 100%, 64%, 0.5)"></div>
+      <div class="info">
+        <div class="label">HSLA <span class="tag">hsla</span></div>
+        <div class="code">hsla(9, 100%, 64%, 0.5)</div>
+      </div>
+    </div>
+
+    <!-- Add more color formats -->
+    <div class="color-box">
+      <div class="swatch" style="background-color: rgb(60, 179, 113);" data-color="rgb(60, 179, 113)"></div>
+      <div class="info">
+        <div class="label">RGB <span class="tag">rgb</span></div>
+        <div class="code">rgb(60, 179, 113)</div>
+      </div>
+    </div>
+
+    <div class="color-box">
+      <div class="swatch" style="background-color: hsla(146, 50%, 47%, 0.7);" data-color="hsla(146, 50%, 47%, 0.7)"></div>
+      <div class="info">
+        <div class="label">HSLA <span class="tag">hsla</span></div>
+        <div class="code">hsla(146, 50%, 47%, 0.7)</div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

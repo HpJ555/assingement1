@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<head>
+    <title>Exam Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #add8e6; 
+            padding: 30px;
+            color: #333;
+            font-weight: bold; 
+        }
+
+        .form-container {
+            max-width: 800px;
+            margin: auto;
+            background-color: #ffffff;
+            padding: 40px 60px;
+            border-radius: 20px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        h2 {
+            text-align: center;
+            color: #004080;
+            margin-bottom: 30px;
+        }
+
+        label {
+            display: block;
+            margin-top: 18px;
+            margin-bottom: 6px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-weight: bold;
+        }
+
+        input[type="submit"] {
+            background-color: #d8b4f8; 
+            color: black;
+            font-size: 18px;
+            margin-top: 25px;
+            cursor: pointer;
+            border: none;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #c084fc; 
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Exam Registration Form</h2>
+
+    <form action="submit_exam_registration.php" method="post">
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="course">Select Course:</label>
+        <select id="course" name="course" required>
+            <option value="">--Select Course--</option>
+            <option value="web_dev">Web Development</option>
+            <option value="data_science">Data Science</option>
+            <option value="graphic_design">Graphic Design</option>
+            <option value="cyber_security">Cyber Security</option>
+        </select>
+
+        <label for="exam_date">Preferred Exam Date:</label>
+        <input type="date" id="exam_date" name="exam_date" required>
+
+        <input type="submit" value="Register Now">
+    </form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Eiffel Tower Landing Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      font-family: 'Segoe UI', sans-serif;
+      scroll-behavior: smooth;
+      line-height: 1.6;
+      background-color: #f3e8ff; 
+    }
+
+  
+    header {
+      background: url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1600&q=80') no-repeat center center fixed;
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+      position: relative;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    header h1 {
+      position: relative;
+      font-size: 3rem;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 1rem 2rem;
+      border-radius: 12px;
+      z-index: 1;
+    }
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .intro {
+      background: #f3e8ff;
+      color: #333;
+    }
+
+    .feature {
+      background: url('https://images.unsplash.com/photo-1580496495144-0f75f963f3c6?auto=format&fit=crop&w=1600&q=80') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      text-align: center;
+      position: relative;
+    }
+
+    .feature::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .feature .content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .feature h2 {
+      font-size: 2.5rem;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 1rem;
+      border-radius: 10px;
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
+
+    .details {
+      background: #e6d6ff; /* slightly darker purple for contrast */
+      color: #222;
+    }
+
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      header h1, .feature h2 {
+        font-size: 2rem;
+      }
+
+      section {
+        padding: 2rem 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  
+  <header>
+    <h1>The Eiffel Tower</h1>
+  </header>
+
+  
+  <section class="intro">
+    <h2>About the Eiffel Tower</h2>
+    <p>
+      The Eiffel Tower, or "La Tour Eiffel", is one of the most iconic structures in the world. Located in Paris, France, it was constructed for the 1889 Exposition Universelle (World’s Fair) to celebrate the 100th anniversary of the French Revolution.
+    </p>
+    <p>
+      Designed by engineer Gustave Eiffel, the tower stands at 330 meters (1,083 feet) tall and remained the tallest structure in the world until the Chrysler Building was completed in New York in 1930.
+    </p>
+  </section>
+
+  
+  <section class="feature">
+    <div class="content">
+      <h2>Architectural Marvel</h2>
+      <p>
+        Built with over 18,000 iron parts and 2.5 million rivets, the Eiffel Tower showcases 19th-century engineering excellence. It took just over two years to build and was initially criticized—yet today it's a beloved symbol of Paris.
+      </p>
+    </div>
+  </section>
+
+
+  <section class="details">
+    <h2>Tourism & Legacy</h2>
+    <p>
+      More than 7 million people visit the Eiffel Tower every year, making it the most-visited paid monument in the world. It has observation decks on multiple levels, offering breathtaking views of the Paris skyline.
+    </p>
+    <p>
+      At night, the tower sparkles every hour with 20,000 lights, creating a magical sight visible throughout the city. It continues to inspire art, film, and literature globally.
+    </p>
+  </section>
+
+  
+  <footer>
+    &copy; 2025 Eiffel Info | Built with ❤️ for Eiffel Tower lovers
+  </footer>
+
+</body>
+</html>
